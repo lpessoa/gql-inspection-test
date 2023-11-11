@@ -1,5 +1,4 @@
----
-name: Commit on Pull Request Test
+name: CI
 
 on:
   pull_request:
@@ -18,7 +17,8 @@ jobs:
       # security-events: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       # - name: mock gql change in file
       #   run: date +%s > report.gql
@@ -30,4 +30,5 @@ jobs:
 
       - uses: kamilkisiela/graphql-inspector@master
         with:
-          schema: "main:./report.gql"
+          schema: "graphql:report.gql"
+          annotations: true
