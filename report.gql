@@ -4,6 +4,6 @@ type Book {
 }
 
 type Author {
-  name: String
+  name: Int
   books: [Book]
 }
