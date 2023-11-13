@@ -20,13 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # - name: mock gql change in file
-      #   run: date +%s > report.gql
+       - name: mock gql change in file
+         run: touchs report.gql
 
-      # - uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "chore: Auto updating file"
-      #     file_pattern: "*.gql"
+       - uses: stefanzweifel/git-auto-commit-action@v5
+         with:
+           commit_message: "chore: Auto updating file"
+           file_pattern: "*.gql"
 
       - uses: kamilkisiela/graphql-inspector@master
         with:
