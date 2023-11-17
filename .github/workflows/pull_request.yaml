@@ -33,7 +33,6 @@ jobs:
           file_pattern: "*.gql"
 
       - uses: kamilkisiela/graphql-inspector@master
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
         with:
           schema: "graphql:report.gql"
           annotations: true
