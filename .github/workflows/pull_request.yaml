@@ -26,7 +26,7 @@ jobs:
       # - name: Generate GraphQL Schema from Resolvers
       #   run: npx --yes generate:graqphql:schema
       - name: mock graphql schema change
-        run: echo -en "type Book { author: Author }" >> report.gql
+        run: echo -en "type Book {}" >> report.gql
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
